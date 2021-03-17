@@ -47,6 +47,7 @@ const gatsbyConfig = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-svgr',
     'gatsby-transformer-yaml',
+    'gatsby-transformer-contentful-snapshot',
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
