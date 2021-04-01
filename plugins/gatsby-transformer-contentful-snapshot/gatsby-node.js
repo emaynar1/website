@@ -54,8 +54,10 @@ exports.onPostBootstrap = async ({ actions, reporter }) => {
       }
     })
     if (latestSnapshot) {
-      const entrySnapshot = entry.getSnapshot(latestSnapshot.sys.id)
+      const entrySnapshot = await entry.getSnapshot(latestSnapshot.sys.id)
       reporter.info(`Found snapshot for ${nodeList[i].contentful_id}`)
+      console.log(entrySnapshot)
+      process.exit(1)
       i += 1
       updateSnapshot()
     } else {
